@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Language-Guided Object Search in Agricultural Environments">
+  <meta name="keywords" content="Spot, Boston Dynamics, LLMs">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language-Guided Object Search in Agricultural Environments</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png
+  ">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+</br>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Language-Guided Object Search in Agricultural Environments</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://adi-balaji.github.io/portfolio/">Advaith Balaji</a>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/saket-pradhan/">Saket Pradhan</a>,</span>
+            <span class="author-block">
+              <a href="https://berenson.robotics.umich.edu/">Dmitry Berenson</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Autonomous Robotic Manipulation Lab<sup><a href="https://arm.robotics.umich.edu/" target="_blank">1</a></sup>, University of Michigan
+            </span>
+          </div>          
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=wjAcp45S1jQ" target="_blank" rel="noopener noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="image-container" style="text-align: center;">
+        <img src="./static/images/main_cover.png" alt="LOSAE in Action" style="max-width: 90%; height: auto;">
+      </div>
+      <h2 class="subtitle has-text-centered"><br>
+        <span class="dnerf">LOSAE in Action</span>: Our method allows the robot to find an unseen object using previously seen objects as instruments of reasoning. Here, the robot can understand that a tool like a <span class="dnerf">drill</span> is most likely located near similar tools like a <span class="dnerf">screwdriver</span>, <span class="dnerf">chisel</span> or <span class="dnerf">shovel</span>.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Creating robots that can effectively assist in agricultural environments has the potential to significantly reduce the mental and physical workload experienced by farm workers. We present LOSAE (Language-Guided Object Search in Agricultural Environments), a novel method that enables robots to locate unseen target objects in loosely semantically organized farm environments. Unlike traditional indoor spaces with clear semantic hierarchies, agricultural settings lack well-defined room-level organization. LOSAE overcomes this challenge by leveraging object-to-object semantic relationships inferred by Large Language Models (LLMs) to guide the robot's search strategy.
+          </p>
+          <p>
+            Our method first explores the environment to build a memory of seen objects and their locations. When queried about an unseen target object, LOSAE uses an LLM to reason about semantic relationships between the target and previously seen objects, generating a probability distribution over potential locations. The robot then plans an efficient path that balances visiting high-probability locations while minimizing travel distance.
+          </p>
+          <p>
+            We deployed LOSAE on a Boston Dynamics Spot robot in a real farm environment, achieving an 80% success rate and a success weighted by path length (SPL) of 0.67. Our offline evaluations demonstrated 84% path efficiency, significantly outperforming baseline methods in both accuracy and efficiency.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<br>
+
+<section>
+  <!-- Paper video. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Summary Video</h2>
+      <div class="publication-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Muyk41TRyjo?si=PCQJK1PekunvPQ3H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <!--/ Paper video. -->
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        
+        <div class="content">
+          <p class="has-text-centered mb-4">
+            Comparison of LOSAE against baseline methods across multiple metrics
+          </p>
+        </div>
+
+        <div class="tables">
+          <table class="table is-fullwidth is-bordered is-striped">
+            <thead>
+              <tr>
+                <th class="has-text-centered">Method</th>
+                <th class="has-text-centered">Success Rate ↑</th>
+                <th class="has-text-centered">SPL ↑</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>LOSAE (Ours)</strong></td>
+                <td class="has-text-centered">0.80</td>
+                <td class="has-text-centered">0.67</td>
+              </tr>
+              <tr>
+                <td>Room Search</td>
+                <td class="has-text-centered">0.73</td>
+                <td class="has-text-centered">0.51</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table is-fullwidth is-bordered is-striped mt-5">
+            <thead>
+              <tr>
+                <th class="has-text-centered">Method</th>
+                <th class="has-text-centered">Avg. Path Efficiency (Std. Dev) ↑</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>LOSAE (Ours)</strong></td>
+                <td class="has-text-centered">0.84 (0.27)</td>
+              </tr>
+              <tr>
+                <td>Room Search</td>
+                <td class="has-text-centered">0.72 (0.33)</td>
+              </tr>
+              <tr>
+                <td>Hottest Object</td>
+                <td class="has-text-centered">0.21 (0.32)</td>
+              </tr>
+              <tr>
+                <td>Hottest Waypoint</td>
+                <td class="has-text-centered">0.19 (0.41)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="content mt-4">
+          <p class="has-text-centered is-size-7">
+            ↑ indicates higher is better. SPL: Success weighted by Path Length
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{balaji2025losae,
+  author    = {Balaji, Advaith and Pradhan, Saket and Berenson, Dmitry},
+  title     = {Language-Guided Object Search in Agricultural Environments},
+  journal   = {International Conference on Robotics and Automation (ICRA)},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
