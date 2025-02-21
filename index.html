@@ -123,7 +123,7 @@
         <img src="./static/images/main_cover.png" alt="LOSAE in Action" style="max-width: 90%; height: auto;">
       </div>
       <h2 class="subtitle has-text-centered"><br>
-        <span class="dnerf">LOSAE in Action</span>: Our method allows the robot to find an unseen object using previously seen objects as instruments of reasoning. Here, the robot can understand that a tool like a <span class="dnerf">drill</span> is most likely located near similar tools like a <span class="dnerf">screwdriver</span>, <span class="dnerf">chisel</span> or <span class="dnerf">shovel</span>.
+        <span class="dnerf">Figure 1</span>: LOSAE in Action. Our method allows the robot to find an unseen object using previously seen objects as instruments of reasoning. Here, the robot can understand that a tool like a <span class="dnerf">drill</span> is most likely located near similar tools like a <span class="dnerf">screwdriver</span>, <span class="dnerf">chisel</span> or <span class="dnerf">shovel</span>.
       </h2>
     </div>
   </div>
@@ -153,6 +153,21 @@
 </section>
 
 <br>
+
+<!--/ System Diagram. -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="image-container" style="text-align: center;">
+        <h2 class="title is-3">System Diagram</h2>
+        <img src="./static/images/system_diagram2.png" alt="LOSAE System Diagram" style="max-width: 90%; height: auto;">
+      </div>
+      <h2 class="subtitle has-text-centered"><br>
+        <span class="dnerf">Figure 2</span>: The robot is tasked with finding a target object <span class="math">x_t</span> based on a user query. Using an LLM for semantic reasoning, it generates a probability distribution <span class="math">P</span> based on object-to-object relationships between a seen object <span class="math">x_s</span> in <span class="math">X_s</span> and the target <span class="math">x_t</span>. This distribution helps compute waypoint scores <span class="math">s(w_i)</span> for each waypoint <span class="math">w_i</span>. The robot plans a path optimizing a cost function <span class="math">C</span>, balancing high-scoring waypoints with short path lengths (see Methods for details). It then navigates to a waypoint, inspects surrounding objects, and grasps the target if found; otherwise, it proceeds to the next waypoint and continues the search.
+      </h2>
+    </div>
+  </div>
+</section>
 
 <section>
   <!-- Paper video. -->
