@@ -122,7 +122,7 @@
       <div class="image-container" style="text-align: center;">
         <img src="./static/images/main_cover.png" alt="LOSAE in Action" style="max-width: 90%; height: auto;">
       </div>
-      <h2 class="subtitle has-text-centered"><br>
+      <h2 class="subtitle has-text-justified"><br>
         <span class="dnerf">Figure 1</span>: LOSAE in Action. Our method allows the robot to find an unseen object using previously seen objects as instruments of reasoning. Here, the robot can understand that a tool like a <span class="dnerf">drill</span> is most likely located near similar tools like a <span class="dnerf">screwdriver</span>, <span class="dnerf">chisel</span> or <span class="dnerf">shovel</span>.
       </h2>
     </div>
@@ -162,7 +162,7 @@
         <h2 class="title is-3">System Diagram</h2>
         <img src="./static/images/system_diagram2.png" alt="LOSAE System Diagram" style="max-width: 90%; height: auto;">
       </div>
-      <h2 class="subtitle has-text-centered"><br>
+      <h2 class="subtitle has-text-justified"><br>
         <span class="dnerf">Figure 2</span>: The robot is tasked with finding a target object <i>x<sub>t</sub></i> based on a user query. Using an LLM for semantic reasoning, it generates a probability distribution <i>P</i> based on object-to-object relationships between a seen object <i>x<sub>s</sub></i> in <i>X<sub>s</sub></i> and the target <i>x<sub>t</sub></i>. This distribution helps compute waypoint scores <i>s(w<sub>i</sub>)</i> for each waypoint <i>w<sub>i</sub></i>. The robot plans a path optimizing a cost function <i>C</i>, balancing high-scoring waypoints with short path lengths (see paper for details). It then navigates to a waypoint, inspects surrounding objects, and grasps the target if found; otherwise, it proceeds to the next waypoint and continues the search.
       </h2>
     </div>
@@ -191,7 +191,7 @@
         
         <div class="content">
           <p class="has-text-centered mb-4">
-            Comparison of LOSAE against baseline methods across multiple metrics
+            Comparison of LOSAE against baseline methods across multiple metrics. See paper for detailed discussion.
           </p>
         </div>
 
